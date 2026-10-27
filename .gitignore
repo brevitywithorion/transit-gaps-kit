@@ -1,0 +1,36 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+*.env
+*secret*
+*secrets*
+*.key
+box-secrets.json
+.DS_Store
+
+# Per-city run artifacts (GTFS, DuckDB, reports)
+runs/
+*.duckdb
+*.duckdb.wal
+
+# Large / proprietary-adjacent local data
+*.osm.pbf
+*.csv.gz
+data/gtfs.zip
+**/gtfs.zip
+
+# Editor / tooling
+.wrangler/
+.idea/
+.vscode/
+*.png
+!docs/**/*.png
+!examples/**/*.png
+
+*.egg-info/
+.eggs/

@@ -1,0 +1,11 @@
+# Core (MIT / BSD / Apache — see docs/THIRD_PARTY.md)
+duckdb>=1.0
+pandas>=2.0
+pyyaml>=6.0
+requests>=2.31
+markdown>=3.5
+
+# Optional (not required for span report)
+# geopandas>=0.14
+# r5py>=1.0   # needs Java 21; GPL-compatible use — see docs/THIRD_PARTY.md
+# matplotlib>=3.8

@@ -1,0 +1,41 @@
+{
+  "city": "Topeka",
+  "state": "KS",
+  "agency": "Topeka Metro",
+  "gtfs_url": "https://gtfs.remix.com/topeka_metro_ks_us.zip",
+  "sample_dates": {
+    "weekday": "2026-10-21",
+    "saturday": "2026-10-24",
+    "sunday": "2026-10-25"
+  },
+  "evening_cutoff": "21:00",
+  "by_day": {
+    "weekday": {
+      "routes": 12,
+      "trips": 385,
+      "first_trip_h": 5.67,
+      "last_trip_h": 18.47,
+      "routes_running_past_evening_cutoff": 0,
+      "has_service": true
+    },
+    "saturday": {
+      "routes": 12,
+      "trips": 258,
+      "first_trip_h": 8.25,
+      "last_trip_h": 18.18,
+      "routes_running_past_evening_cutoff": 0,
+      "has_service": true
+    },
+    "sunday": {
+      "routes": 0,
+      "trips": 0,
+      "first_trip_h": null,
+      "last_trip_h": null,
+      "routes_running_past_evening_cutoff": 0,
+      "has_service": false
+    }
+  },
+  "sunday_gap": true,
+  "evening_gap_weekday": true,
+  "generated": "2026-10-27T17:20:02"
+}

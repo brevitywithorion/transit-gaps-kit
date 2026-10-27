@@ -1,0 +1,42 @@
+# Copy to configs/<city>.yaml and fill in.
+city:
+  name: YourCity
+  state: XX
+  state_fips: "00"
+  county_fips: "000"
+  county_name: Your County
+  timezone: America/Chicago
+  branding:
+    title: "YourCity transit access gaps"
+    description: "Who can get where without a car, and when."
+    base_url: ""
+
+gtfs:
+  url: "https://example.com/gtfs.zip"
+  agency_hint: "Your Transit Agency"
+
+boundary:
+  bbox: [-97.0, 35.0, -96.5, 35.5]   # west, south, east, north
+  geoid_prefix: "00000"
+  local_crs: "EPSG:26915"
+
+acs:
+  year: "2023"
+  tables: ["B08201", "B25044"]
+
+lodes:
+  state: xx
+  year: "2023"
+
+peers:
+  ntd_ids: []
+
+analysis:
+  sample_dates:
+    weekday: "2026-10-21"
+    saturday: "2026-10-24"
+    sunday: "2026-10-25"
+  evening_cutoff: "21:00"
+
+content:
+  example_dir: ""

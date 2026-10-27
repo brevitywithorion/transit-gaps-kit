@@ -1,0 +1,57 @@
+# City config for Transit Gaps Kit
+# Origin project: Lawrence, KS (https://lawrence-transit-gaps.pages.dev)
+# Not affiliated with Strong Towns.
+
+city:
+  name: Lawrence
+  state: KS
+  state_fips: "20"
+  county_fips: "045"          # Douglas County
+  county_name: Douglas County
+  timezone: America/Chicago
+  branding:
+    title: "Lawrence transit access gaps"
+    description: "A neutral, independent analysis of who can reach work, food, healthcare and school by bus in Lawrence, Kansas."
+    base_url: "https://lawrence-transit-gaps.pages.dev"  # example only; leave blank for local builds
+
+gtfs:
+  # Public static GTFS (Remix host linked from lawrencetransit.org/data/)
+  url: "https://gtfs.remix.com/lawrence_transit_lawrence_ks_us.zip"
+  agency_hint: "Lawrence Transit"
+
+boundary:
+  # Bounding box for OSM clip / map framing [west, south, east, north]
+  bbox: [-95.51, 38.73, -95.05, 39.06]
+  # GEOID prefix for TIGER block groups / LODES filter (state+county)
+  geoid_prefix: "20045"
+  # Optional projected CRS for local meters (UTM zone 15N for eastern KS)
+  local_crs: "EPSG:26915"
+
+acs:
+  year: "2023"
+  tables: ["B08201", "B25044", "B23025", "B08301"]
+  # Requires CENSUS_API_KEY in the environment; never commit the key.
+
+lodes:
+  state: ks
+  year: "2023"
+  # LODES8 WAC/RAC + crosswalk; filter rows by geoid_prefix
+
+peers:
+  # Optional NTD agency IDs for peer comparison (illustrative)
+  ntd_ids: ["70048", "70044"]
+
+analysis:
+  # Sample dates for weekday / Saturday / Sunday span (must fall in feed calendar)
+  sample_dates:
+    weekday: "2026-10-21"
+    saturday: "2026-10-24"
+    sunday: "2026-10-25"
+  evening_cutoff: "21:00"     # used to flag evening gaps
+  walk_transit_cap_min: 120
+  need_threshold_min: 30
+  job_thresholds_min: [30, 45]
+
+content:
+  # Path (relative to this config) to optional city-specific prose
+  example_dir: "../examples/lawrence"

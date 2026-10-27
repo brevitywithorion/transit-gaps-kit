@@ -1,0 +1,32 @@
+day_type,route,route_long_name,trips,first_trip,last_trip,first_h,last_h,span_h
+saturday,1,Downtown / East Hills,28,06:00,19:25,6.0,19.42,13.42
+saturday,2,Central Station / Lakeview Road via LMH,28,06:00,19:20,6.0,19.33,13.33
+saturday,3,Downtown / Lakeview Road via LMH,28,06:25,20:00,6.42,20.0,13.58
+saturday,4,Wakarusa & 6th / Downtown via Central Station & KU,27,06:30,19:30,6.5,19.5,13.0
+saturday,5,Central Station / East Hills via HINU,27,06:00,19:00,6.0,19.0,13.0
+saturday,6,Rock Chalk Park / North Lawrence via Downtown,37,06:13,19:43,6.22,19.72,13.5
+saturday,7,Downtown / South Iowa,28,06:00,19:17,6.0,19.28,13.28
+saturday,8,Central Station / Peaslee Tech via KU & HINU,28,06:00,19:30,6.0,19.5,13.5
+saturday,9,South Iowa / Central Station,28,06:00,19:30,6.0,19.5,13.5
+saturday,11,Central Station / 31st & Iowa via KU,36,06:15,19:45,6.25,19.75,13.5
+saturday,12,Central Station / 27th & Wakarusa,35,06:45,19:45,6.75,19.75,13.0
+saturday,53,SafeBus,24,22:40,26:38,22.67,26.63,3.97
+weekday,1,Downtown / East Hills,43,05:55,19:25,5.92,19.42,13.5
+weekday,2,Central Station / Lakeview Road via LMH,45,06:00,19:20,6.0,19.33,13.33
+weekday,3,Downtown / Lakeview Road via LMH,47,05:55,20:00,5.92,20.0,14.08
+weekday,4,Wakarusa & 6th / Downtown via Central Station & KU,54,06:30,19:30,6.5,19.5,13.0
+weekday,5,Central Station / East Hills via HINU,41,06:00,19:30,6.0,19.5,13.5
+weekday,6,Rock Chalk Park / North Lawrence via Downtown,43,06:00,19:43,6.0,19.72,13.72
+weekday,7,Downtown / South Iowa,48,06:00,19:17,6.0,19.28,13.28
+weekday,8,Central Station / Peaslee Tech via KU & HINU,42,06:00,19:30,6.0,19.5,13.5
+weekday,9,South Iowa / Central Station,48,06:00,19:30,6.0,19.5,13.5
+weekday,11,Central Station / 31st & Iowa via KU,63,06:15,22:15,6.25,22.25,16.0
+weekday,12,Central Station / 27th & Wakarusa,62,06:34,22:30,6.57,22.5,15.93
+weekday,30,Bob Billings & Crestline / KU,72,07:02,21:55,7.03,21.92,14.88
+weekday,34,7th St / KU,71,07:11,21:31,7.18,21.52,14.33
+weekday,36,6th & Kasold / KU via Emery Road,72,07:18,21:38,7.3,21.63,14.33
+weekday,38,31st St / KU,71,07:00,21:39,7.0,21.65,14.65
+weekday,41,Park & Ride,160,07:00,17:49,7.0,17.82,10.82
+weekday,42,Blue Circulator via Rec Center,165,07:15,17:34,7.25,17.57,10.32
+weekday,43,Red Circulator,189,07:10,17:16,7.17,17.27,10.1
+weekday,44,Evening Campus Circulator,28,17:40,22:04,17.67,22.07,4.4

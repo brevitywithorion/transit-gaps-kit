@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transit-gaps-kit"
+version = "0.1.0"
+description = "Town-agnostic kit: who can get where without a car, and when (GTFS span + optional access modeling)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Orion Wills" }]
+requires-python = ">=3.10"
+dependencies = [
+  "duckdb>=1.0",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+  "requests>=2.31",
+  "markdown>=3.5",
+]
+keywords = ["transit", "gtfs", "strong-towns", "accessibility", "span-of-service"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: GIS",
+]
+
+[project.optional-dependencies]
+acs = ["pandas>=2.0"]
+geo = ["geopandas>=0.14", "shapely>=2.0", "pyogrio"]
+r5 = ["r5py>=1.0", "geopandas>=0.14"]
+all = ["transit-gaps-kit[acs,geo,r5]"]
+
+[project.scripts]
+transit-gaps = "transit_gaps.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/brevitywithorion/transit-gaps-kit"
+Origin = "https://lawrence-transit-gaps.pages.dev"
+
+[tool.setuptools.packages.find]
+where = ["src"]

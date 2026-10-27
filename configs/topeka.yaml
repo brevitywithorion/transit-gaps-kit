@@ -1,0 +1,48 @@
+# City config — Topeka, KS (second-city test of the kit; do not deploy publicly)
+# GTFS: Topeka Metro via Remix (linked from topekametro.org/GTFS/)
+
+city:
+  name: Topeka
+  state: KS
+  state_fips: "20"
+  county_fips: "177"          # Shawnee County
+  county_name: Shawnee County
+  timezone: America/Chicago
+  branding:
+    title: "Topeka transit access gaps"
+    description: "A neutral, independent analysis of who can reach work, food, healthcare and school by bus in Topeka, Kansas."
+    base_url: ""              # local only — do not deploy
+
+gtfs:
+  url: "https://gtfs.remix.com/topeka_metro_ks_us.zip"
+  agency_hint: "Topeka Metro"
+
+boundary:
+  # From Topeka Metro stop extents (Oct 2026 feed), padded
+  bbox: [-95.80, 38.98, -95.60, 39.12]
+  geoid_prefix: "20177"
+  local_crs: "EPSG:26915"
+
+acs:
+  year: "2023"
+  tables: ["B08201", "B25044", "B23025", "B08301"]
+
+lodes:
+  state: ks
+  year: "2023"
+
+peers:
+  ntd_ids: []
+
+analysis:
+  sample_dates:
+    weekday: "2026-10-21"
+    saturday: "2026-10-24"
+    sunday: "2026-10-25"
+  evening_cutoff: "21:00"
+  walk_transit_cap_min: 120
+  need_threshold_min: 30
+  job_thresholds_min: [30, 45]
+
+content:
+  example_dir: "../examples/topeka"
