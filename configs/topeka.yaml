@@ -19,7 +19,7 @@ gtfs:
 
 boundary:
   # From Topeka Metro stop extents (Oct 2026 feed), padded
-  bbox: [-95.80, 38.98, -95.60, 39.12]
+  bbox: [-96.06, 38.85, -95.48, 39.24]  # Shawnee County BG extent + pad
   geoid_prefix: "20177"
   local_crs: "EPSG:26915"
 
@@ -32,7 +32,7 @@ lodes:
   year: "2023"
 
 peers:
-  ntd_ids: []
+  ntd_ids: ["70014"]  # Topeka Metropolitan Transit Authority
 
 analysis:
   sample_dates:

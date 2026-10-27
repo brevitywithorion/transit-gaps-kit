@@ -1,27 +1,31 @@
-# Topeka Metro — span results (local test, not deployed)
+# Topeka Metro — full report results (preview)
 
-Feed: `https://gtfs.remix.com/topeka_metro_ks_us.zip`  
-Feed version note: Updated Oct 26, 2026. Sample dates 2026-10-21 (Wed) / 10-24 (Sat) / 10-25 (Sun).  
-Generated locally under `runs/topeka-ks/` (gitignored). Copies of key outputs sit beside this file.
+**Preview URL (noindex):** https://preview.topeka-transit-gaps.pages.dev  
+**Deployment:** https://980877ff.topeka-transit-gaps.pages.dev  
+**Production `topeka-transit-gaps.pages.dev`:** intentionally empty (404) — no production deploy.
 
-## Key numbers
+## Key findings (public data only)
 
-| Day | Routes | Trips | First trip (start) | Last trip (start) | Past 21:00? |
-|---|---:|---:|---|---|---|
-| Weekday | 12 | 385 | ~5:40 AM | ~6:28 PM | **No** (0 routes) |
-| Saturday | 12 | 258 | ~8:15 AM | ~6:11 PM | **No** |
-| Sunday | **0** | **0** | — | — | — |
+| Metric | Value | Source |
+|---|---|---|
+| Sunday fixed-route service | **None** (0 trips) | Topeka Metro GTFS calendar |
+| Weekday last trip start | ~**6:28 PM**; 0 routes past 9 PM | GTFS sample Wed 2026-10-21 |
+| Saturday last trip start | ~**6:11 PM** | GTFS sample Sat 2026-10-24 |
+| Shawnee Co. households | 74,528 | ACS 2023 B25044 |
+| No-vehicle households | 5,578 | ACS 2023 B25044 |
+| Jobs (LODES 2023) | 103,349 | LODES8 WAC |
+| HH missing 30-min needs (Wed 8 AM) | **55,277** | r5py + ACS |
+| HH missing 30-min needs (Sun 11 AM) | **63,300** | r5py + ACS (walk-only) |
+| HH-weighted jobs in 45 min (Wed 8 AM) | **11.8%** | r5py + LODES |
+| Same, Sunday | **6.0%** | r5py + LODES |
+| NTD 2024 MB VRH / $/hr | 50,975 / $129.25 | FTA NTD (70014) |
 
-- **Sunday gap:** yes (no `sunday=1` service_ids in calendar).
-- **Weekday evening gap:** yes vs kit cutoff 21:00; system ends mid-evening (~18:40–18:47 trip starts). Earlier end than Lawrence’s city routes (~19:17–20:00) and far earlier than Lawrence routes 11/12 (~22:15+).
-- Stops in feed: ~607. Agency: Topeka Metro.
+## Screenshots
 
-## Sanity check vs Lawrence origin
+- `local_home.png` — built site homepage (local render; box cannot TLS to pages.dev)
+- `local_map.png` — map page local render
+- Span-only earlier screenshots also in this folder
 
-Both cities show **zero Sunday fixed-route service**. Topeka’s weekday span is shorter in the evening. That is a plausible peer contrast for the kit’s gap flags — not a ranking or recommendation.
+## Not replicated (needs records request / local knowledge)
 
-## Artifacts
-
-- `gaps_summary.json`, `route_span.csv`, `span_report.md`, `span_report.html` (this folder)
-- Full run (including GTFS extract): `runs/topeka-ks/` on a machine that executed `transit-gaps -c configs/topeka.yaml run`
-- Screenshot of HTML report: `span_report_screenshot.png` (if present)
+See report §5: marginal $/revenue-hour, On Demand hours, APC/ridership, school bells, Title VI, budget detail, stop-candidate siting, neighborhood cards, Google travel-time validation, agency-confirmed stage costs.
